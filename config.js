@@ -8,7 +8,8 @@ const server = {
 		http2: true,
 		port: 443, // SSL port used to serve registered https routes with LetsEncrypt certificate.
 	},
-	xfwd: true
+	xfwd: true,
+	bunyan : true
 };
 
 
@@ -46,14 +47,13 @@ module.exports = {
 		]
 	},
 
-
 	production : {
 
 		server,
 
 		routes : [
 			{
-				from    : "sslproxy1.videoflow.io",
+				from : "sslproxy1.videoflow.io",
 				to   : "http://vfc-rjso5f-r8.videoflow.io",
 				options : {
 					ssl: {
@@ -64,10 +64,11 @@ module.exports = {
 					}
 				}
 			},
-			{
-				from    : "sslproxy2.videoflow.io",
-				to   : "http://github.com"
-			}
+
+			// {
+			// 	from    : "sslproxy2.videoflow.io",
+			// 	to   : "http://github.com"
+			// }
 		]
 	}
 };
