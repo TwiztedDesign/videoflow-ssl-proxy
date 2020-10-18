@@ -1,5 +1,5 @@
 
-const config  = require('./config')[process.env.NODE_ENV || 'development'];
+const config  = require('./config')[process.env.NODE_ENV || 'production'];
 const proxy = require('redbird')(config.server);
 
 
