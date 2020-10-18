@@ -65,7 +65,7 @@ module.exports = {
 
 		routes : [
 			{
-				from : "sslproxy1.videoflow.io",
+				from : "sslproxy2.videoflow.io",
 				to   : "http://vfc-rjso5f-r8.videoflow.io",
 				// options : {
 				// 	ssl: {
