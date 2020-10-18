@@ -59,7 +59,7 @@ module.exports = {
 					ssl: {
 						letsencrypt: {
 							email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
-							production: false, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+							production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
 						}
 					}
 				}
