@@ -12,14 +12,14 @@ const server = {
 	resolvers: [
 		customResolver1
 	],
-	// letsencrypt: {
-	// 	path: __dirname + '/certs',
-	// 	port: 9999 // LetsEncrypt minimal web server port for handling challenges. Routed 80->9999, no need to open 9999 in firewall. Default 3000 if not defined.
-	// },
-	// ssl: {
-	// 	http2: true,
-	// 	port: 443, // SSL port used to serve registered https routes with LetsEncrypt certificate.
-	// },
+	letsencrypt: {
+		path: __dirname + '/certs',
+		port: 9999 // LetsEncrypt minimal web server port for handling challenges. Routed 80->9999, no need to open 9999 in firewall. Default 3000 if not defined.
+	},
+	ssl: {
+		http2: true,
+		port: 443, // SSL port used to serve registered https routes with LetsEncrypt certificate.
+	},
 	xfwd: true,
 	bunyan : true
 };
@@ -67,14 +67,14 @@ module.exports = {
 			{
 				from : "sslproxy2.videoflow.io",
 				to   : "http://vfc-rjso5f-r8.videoflow.io",
-				// options : {
-				// 	ssl: {
-				// 		letsencrypt: {
-				// 			email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
-				// 			production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
-				// 		}
-				// 	}
-				// }
+				options : {
+					ssl: {
+						letsencrypt: {
+							email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
+							production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+						}
+					}
+				}
 			},
 			// {
 			// 	from : "videoflow-ssl-proxy.herokuapp.com",
