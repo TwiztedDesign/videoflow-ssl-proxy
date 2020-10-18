@@ -64,6 +64,18 @@ module.exports = {
 					}
 				}
 			},
+			{
+				from : "videoflow-ssl-proxy.herokuapp.com",
+				to   : "http://vfc-rjso5f-r8.videoflow.io",
+				options : {
+					ssl: {
+						letsencrypt: {
+							email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
+							production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+						}
+					}
+				}
+			},
 
 			// {
 			// 	from    : "sslproxy2.videoflow.io",
