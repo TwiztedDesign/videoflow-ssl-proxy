@@ -78,7 +78,7 @@ module.exports = {
 			},
 			{
 				from : "channel.flowgic.io",
-				to   : "https://www.videoflow.io/channel/vfc-rlci0r7p5",
+				to   : "https://vfc-rlci0r7p5.videoflow.io/",
 				options : {
 					ssl: {
 						letsencrypt: {
