@@ -20,6 +20,11 @@ const server = {
 		http2: true,
 		port: 443, // SSL port used to serve registered https routes with LetsEncrypt certificate.
 	},
+	httpProxy: {
+		// This config allows HTTPS targets
+		secure: false,
+		changeOrigin: true,
+	},
 	xfwd: true,
 	bunyan : true
 };
