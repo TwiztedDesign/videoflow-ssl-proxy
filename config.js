@@ -69,18 +69,18 @@ module.exports = {
 		server,
 
 		routes : [
-			{
-				from : "sslproxy2.videoflow.io",
-				to   : "https://www.videoflow.io/channel/vfc-rjso5f-r8",
-				options : {
-					ssl: {
-						letsencrypt: {
-							email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
-							production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
-						}
-					}
-				}
-			},
+			// {
+			// 	from : "sslproxy2.videoflow.io",
+			// 	to   : "https://www.videoflow.io/channel/vfc-rjso5f-r8",
+			// 	options : {
+			// 		ssl: {
+			// 			letsencrypt: {
+			// 				email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
+			// 				production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+			// 			}
+			// 		}
+			// 	}
+			// },
 			{
 				from : "channel.flowgic.io",
 				to   : "https://vfc-rlci0r7p5.videoflow.io/",
