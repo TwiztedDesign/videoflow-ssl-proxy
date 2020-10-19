@@ -76,6 +76,18 @@ module.exports = {
 					}
 				}
 			},
+			{
+				from : "channel.flowgic.io",
+				to   : "https://www.videoflow.io/channel/vfc-rlci0r7p5",
+				options : {
+					ssl: {
+						letsencrypt: {
+							email: 'jan.umansky@twizted-design.com', // Domain owner/admin email
+							production: true, // WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+						}
+					}
+				}
+			},
 			// {
 			// 	from : "videoflow-ssl-proxy.herokuapp.com",
 			// 	to   : "http://vfc-rjso5f-r8.videoflow.io",
