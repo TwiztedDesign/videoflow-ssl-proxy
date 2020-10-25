@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mongodb": "^3.6.2",
     "redbird": "^0.10.0"
   },
-
   "engines": {
     "node": "12.18.3"
   }
