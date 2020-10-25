@@ -1,5 +1,5 @@
 
-const config  = require('./config')[process.env.NODE_ENV || 'producation'];
+const config  = require('./config')[process.env.NODE_ENV || 'production'];
 const proxy = require('redbird')(config.server);
 const ROUTES = {};
 const UPDATE_INTERVAL = 1000 * 60 * 10;
