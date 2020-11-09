@@ -6,7 +6,6 @@ const DB_NAME = config.db.name
 let Mongo = require('./utils/db');
 let mongo = new Mongo(config.db.url);
 
-
 async function queryDatabase (db) {
 	return db.collection('channels').find({whitelist_domains : { $exists: true, $ne: [] }}).toArray();
 }
