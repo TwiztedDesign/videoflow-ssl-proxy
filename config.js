@@ -30,7 +30,6 @@ const server = {
 	bunyan : true
 };
 
-
 module.exports = {
 
 
