@@ -2,7 +2,6 @@ require('dotenv').config();
 const config  = require('./config');
 const proxy = require('redbird')(config.server);
 const ROUTES = {};
-const UPDATE_INTERVAL = 1000 * 60 * 10;
 const DB_NAME = config.db.name
 let Mongo = require('./utils/db');
 let mongo = new Mongo(config.db.url);
@@ -56,7 +55,7 @@ setInterval(()=> {
 	} catch (e) {
 		console.error(e);
 	}
-}, UPDATE_INTERVAL);
+}, config.UPDATE_INTERVAL);
 
 
 

@@ -6,7 +6,6 @@ const customResolver1 = function(host, url, req) {
 // assign high priority
 customResolver1.priority = 100;
 
-const dbName = 'videoflow';
 
 const server = {
 	port: process.env.PORT || 80, // http port is needed for LetsEncrypt challenge during request / renewal. Also enables automatic http->https redirection for registered https routes.
@@ -35,5 +34,6 @@ module.exports = {
 		name: process.env.DB_NAME,
 		url : process.env.DB_URL
 	},
-	server
+	server,
+	UPDATE_INTERVAL : 1000 * 60 * 10
 };
