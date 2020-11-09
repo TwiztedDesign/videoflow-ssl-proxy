@@ -1,9 +1,9 @@
-
-const config  = require('./config')[process.env.NODE_ENV || 'production'];
+require('dotenv').config();
+const config  = require('./config');
 const proxy = require('redbird')(config.server);
 const ROUTES = {};
 const UPDATE_INTERVAL = 1000 * 60 * 10;
-const DB_NAME = process.env.DB_NAME;
+const DB_NAME = config.db.name
 let Mongo = require('./utils/db');
 let mongo = new Mongo(config.db.url);
 
@@ -60,7 +60,7 @@ setInterval(()=> {
 
 
 
-console.log('Server started on port:' , process.env.PORT || 80);
+console.log('Server started on port:' , config.server.port);
 
 
 

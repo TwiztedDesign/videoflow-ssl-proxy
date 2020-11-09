@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+certs
+.idea
+.DS_Store
+.env
+evn.list

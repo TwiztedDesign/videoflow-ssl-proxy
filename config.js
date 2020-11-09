@@ -33,23 +33,10 @@ const server = {
 
 module.exports = {
 
-	development : {
 
-		db : {
-			name: dbName,
-			url : 'mongodb://127.0.0.1/' + dbName
-		},
-
-		server
+	db : {
+		name: process.env.DB_NAME,
+		url : process.env.DB_URL
 	},
-
-	production : {
-
-		db : {
-			name: dbName,
-			url : `mongodb://admin:Videoflow1@videoflow-shard-00-00.maspi.mongodb.net:27017,videoflow-shard-00-01.maspi.mongodb.net:27017,videoflow-shard-00-02.maspi.mongodb.net:27017/${dbName}?ssl=true&replicaSet=atlas-sxkn4p-shard-0&authSource=admin&retryWrites=false&w=majority`
-		},
-
-		server
-	}
+	server
 };
