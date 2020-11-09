@@ -31,8 +31,6 @@ const server = {
 };
 
 module.exports = {
-
-
 	db : {
 		name: process.env.DB_NAME,
 		url : process.env.DB_URL
